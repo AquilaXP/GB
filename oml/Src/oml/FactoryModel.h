@@ -3,15 +3,15 @@
 #include <string>
 #include <memory>
 
-#include "oml/ITree.h"
+#include "oml/IModel.h"
 #include "oml/Config.h"
 
 namespace oml{
 
-struct OML_API FactoryTree
+struct OML_API FactoryModel
 {
     /// Создать дерево
-    static std::unique_ptr<ITree> create( const std::string& name );
+    static std::unique_ptr<IModel> create( const std::string& name );
 
     /// Получить имена доступных объектов
     static std::vector< std::string > names();

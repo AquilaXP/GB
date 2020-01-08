@@ -16,6 +16,10 @@ int main()
     oml::GradientBoosting tree{ 200, 0.1, 128 };
 
     tree.fit( ds_train, t_train );
+
+    for( auto& v : tree.get_loss() )
+        std::cout << v << '\n';
+    std::cout << '\n';
     auto res = tree.predict( ds_hold );
     std::vector< double > r;
     for( auto& rr : res )

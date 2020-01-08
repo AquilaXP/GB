@@ -134,15 +134,15 @@
     <ClInclude Include="Src\oml\Data.h" />
     <ClInclude Include="Src\oml\DataSetLoader.h" />
     <ClInclude Include="Src\oml\Exception.h" />
-    <ClInclude Include="Src\oml\FactoryTree.h" />
+    <ClInclude Include="Src\oml\FactoryModel.h" />
     <ClInclude Include="Src\oml\GradientBoosting.h" />
-    <ClInclude Include="Src\oml\ITree.h" />
+    <ClInclude Include="Src\oml\IModel.h" />
     <ClInclude Include="Src\oml\RegressionTreeFastMse.h" />
     <ClInclude Include="Src\oml\Util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\DataSetLoader.cpp" />
-    <ClCompile Include="Src\FactoryTree.cpp" />
+    <ClCompile Include="Src\FactoryModel.cpp" />
     <ClCompile Include="Src\GradientBoosting.cpp" />
     <ClCompile Include="Src\RegressionTreeFastMse.cpp" />
   </ItemGroup>

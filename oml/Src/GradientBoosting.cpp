@@ -1,6 +1,6 @@
 #include "oml/GradientBoosting.h"
 
-#include "oml/FactoryTree.h"
+#include "oml/FactoryModel.h"
 #include "oml/Util.h"
 
 template< class Ty, class Alloc >
@@ -50,7 +50,7 @@ void GradientBoosting::init_ready( const nlohmann::json& json )
     json.at( "trees" ).get_to( tree_json );
     for( const auto& json : tree_json )
     {
-        auto tree = FactoryTree::create( type_tree );
+        auto tree = FactoryModel::create( type_tree );
         tree->load( json );
         trees.emplace_back( std::move( tree ) );
     }
@@ -98,7 +98,7 @@ void GradientBoosting::fit( const oml::data_x_t& X, const data_y_t& y )
             }
         }
 
-        auto tree = FactoryTree::create( "RegressionTreeFastMse" );
+        auto tree = FactoryModel::create( "RegressionTreeFastMse" );
         nlohmann::json param_tree;
         param_tree["max_depth"] = m_max_depth;
         param_tree["min_size"] = m_min_size;
@@ -130,6 +130,11 @@ std::vector< double > GradientBoosting::predict( const std::vector< std::vector<
     }
 
     return pred;
+}
+
+std::vector< double > GradientBoosting::get_loss() const
+{
+    return m_loss_by_iter;
 }
 
 std::vector< double > GradientBoosting::initialization( const std::vector< double >& y )

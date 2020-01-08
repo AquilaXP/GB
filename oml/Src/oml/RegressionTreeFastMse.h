@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "oml/ITree.h"
+#include "oml/IModel.h"
 #include "oml/Config.h"
 
 #pragma warning( push )
@@ -10,7 +10,7 @@
 
 namespace oml{
 
-class OML_API RegressionTreeFastMse : public oml::ITree
+class OML_API RegressionTreeFastMse : public oml::IModel
 {
 public:
     static std::string get_name();

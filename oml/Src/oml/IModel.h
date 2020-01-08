@@ -10,15 +10,15 @@
 namespace oml{
 
     /*
-        \brief Базовый класс деревьев решений
+        \brief Базовый класс моделей
     */
-    class OML_API ITree
+    class OML_API IModel
     {
     public:
-        ITree() = default;
-        ITree( const ITree& ) = delete;
-        ITree& operator = ( const ITree& ) = delete;
-        virtual ~ITree() = default;
+        IModel() = default;
+        IModel( const IModel& ) = delete;
+        IModel& operator = ( const IModel& ) = delete;
+        virtual ~IModel() = default;
 
         /// Инициализирован ли
         virtual bool is_init() const = 0;

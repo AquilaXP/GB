@@ -21,13 +21,7 @@
     <ClInclude Include="Src\oml\Exception.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Src\oml\FactoryTree.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Src\oml\GradientBoosting.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\oml\ITree.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Src\oml\RegressionTreeFastMse.h">
@@ -39,11 +33,14 @@
     <ClInclude Include="Src\oml\Util.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Src\oml\IModel.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\oml\FactoryModel.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\FactoryTree.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Src\GradientBoosting.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -51,6 +48,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Src\RegressionTreeFastMse.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FactoryModel.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

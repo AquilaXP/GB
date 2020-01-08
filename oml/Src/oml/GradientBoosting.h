@@ -5,7 +5,7 @@
 
 #include "nlohmann/json.hpp"
 
-#include "oml/ITree.h"
+#include "oml/IModel.h"
 #include "oml/Config.h"
 
 namespace oml{
@@ -19,7 +19,7 @@ class OML_API GradientBoosting
     std::vector< double > m_loss_by_iter;
     int m_n_samples = 0;
 
-    std::vector< std::unique_ptr<oml::ITree> > trees;
+    std::vector< std::unique_ptr<oml::IModel> > trees;
     std::vector< std::vector< double > > m_X;
     std::vector< double > m_y;
 public:
@@ -37,6 +37,8 @@ public:
     void fit( const data_x_t& X, const data_y_t& y );
 
     std::vector< double > predict( const std::vector< std::vector< double > >& X );
+
+    std::vector< double > get_loss() const;
 
 private:
     std::vector< double > initialization( const std::vector< double >& y );
